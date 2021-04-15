@@ -1,17 +1,35 @@
 # Requirements
 ## Introduction
- --- TBD 
+ This system is basically concerned with the reservation of Darshan  tickets to the piligrims who wants to visit Tirumala.
+
+In this project the reservation is done with the feature of cancelling and waiting list.
+
+In the project we are going to include entities like
+Reservation
+Cancellation
+Display reserved and waiting list passengers.
+
+
 
 ## Research
 ![Description](Link to Pic)
 -- Content 
 ## Cost and Features
 ![Description](Link to Pic)
--- Content 
+All the manual work should be converted into computerized so that the load of employees should decrease.
+The data should be stored in computer rather than in register manually.
+Booking can be done by sitting at your home only, no need to visit the booking counter![image](https://user-images.githubusercontent.com/63308610/114901591-92993680-9e32-11eb-919a-8324189cfa05.png)
+
 ## Defining Our System
     -- TBD
 ## SWOT ANALYSIS
 ![SWOT-Sample](Link to Pic)
+Reduces the burden of traveler waiting in the booking counter.
+User-friendly.
+Convenient.
+Time savings.
+Helpful during COVID.
+![image](https://user-images.githubusercontent.com/63308610/114901788-c2e0d500-9e32-11eb-8691-71398ba6e68a.png)
 
 # 4W&#39;s and 1&#39;H
 
