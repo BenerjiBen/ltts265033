@@ -12,8 +12,13 @@ Display reserved and waiting list passengers.
 
 
 ## Research
-![Description](Link to Pic)
--- Content 
+The need of the system arise because as is the known fact that the India has 
+the largest railway network in the whole of the world and to handle it manually is quite tough 
+job. By computerizing it we will be able to overcome many of its limitations and will be able 
+to handle it more efficiently. The handling of such records and data for such system is a very 
+complex task if it is done manually but it can be made much easier if the system is 
+computerized.
+
 ## Cost and Features
 ![Description](Link to Pic)
 All the manual work should be converted into computerized so that the load of employees should decrease.
@@ -25,9 +30,13 @@ Booking can be done by sitting at your home only, no need to visit the booking c
 ## SWOT ANALYSIS
 ![SWOT-Sample](Link to Pic)
 Reduces the burden of traveler waiting in the booking counter.
+
 User-friendly.
+
 Convenient.
-Time savings.
+
+Time saving.
+
 Helpful during COVID.
 
 
