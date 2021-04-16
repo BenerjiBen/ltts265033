@@ -28,7 +28,8 @@ Booking can be done by sitting at your home only, no need to visit the booking c
 ## Defining Our System
     -- TBD
 ## SWOT ANALYSIS
-![SWOT-Sample](Link to Pic)
+![SWOT-Sample](Link ![Untitled Workspace](https://user-images.githubusercontent.com/63308610/114976873-530b3280-9ea4-11eb-9ef8-9d2fd4f1d822.png)
+to Pic)
 Reduces the burden of traveler waiting in the booking counter.
 
 User-friendly.
@@ -60,7 +61,7 @@ help to do this job efficiently
 
 ## Where:
 
-People from anywhere can use this and book their tickets
+People from anywhere can use this and book their Darshan tokens.
 
 ## How:
 
@@ -73,7 +74,6 @@ The user is presented with multiple options for booking and cancellation of tick
 |:--: | :--:      | :--:  |
 |HL01| User Shall be able to login the system.           | Done|
 |HL02  |User Shall be able to book the ticket.           | Done|
-|HL03  |User Shall be able to view the available trains. | Done|
 |HL04  |User Shall be able to cancel the ticket.         | Done|
 |HL05  |Data should be saved in case of failure.         | Future|
 |HL06  |Proper GUI can be implemented for further.       | Future|
