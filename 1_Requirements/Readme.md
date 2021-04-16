@@ -68,9 +68,9 @@ The user is presented with multiple options for booking and cancellation of tick
 
 # Detail requirements
 ## High Level Requirements:
--------------------------------------------------------------
-ID |Description| Status
---------------------------------------------------------------
+
+|ID   |Description| Status|
+|:--: | :--:      | :--:  |
 |HL01| User Shall be able to login the system.           | Done|
 |HL02  |User Shall be able to book the ticket.           | Done|
 
