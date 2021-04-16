@@ -1,5 +1,5 @@
 # Name of the project
-PROJECT_NAME = Calculator
+PROJECT_NAME = TTD Booking
 
 # Output directory
 BUILD = build
