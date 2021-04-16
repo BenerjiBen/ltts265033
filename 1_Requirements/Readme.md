@@ -80,5 +80,9 @@ The user is presented with multiple options for booking and cancellation of tick
 
 
 ##  Low level Requirements:
---- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
+
+|ID |Description| Status|
+|:--:|:--:|:--:|
+|LL01| The user will be able to login successfully with the valid credential.|Done|
+|LL02| If user entered the incorrect login credentials then ‘SORRY !!!! LOGIN IS UNSUCESSFUL’ message should be displayed.| Done|
+
