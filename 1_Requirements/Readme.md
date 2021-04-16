@@ -73,13 +73,9 @@ The user is presented with multiple options for booking and cancellation of tick
 |:--: | :--:      | :--:  |
 |HL01| User Shall be able to login the system.           | Done|
 |HL02  |User Shall be able to book the ticket.           | Done|
-
 |HL03  |User Shall be able to view the available trains. | Done|
-
 |HL04  |User Shall be able to cancel the ticket.         | Done|
-
 |HL05  |Data should be saved in case of failure.         | Future|
-
 |HL06  |Proper GUI can be implemented for further.       | Future|
 
 
