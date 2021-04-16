@@ -82,6 +82,6 @@ The user is presented with multiple options for booking and cancellation of tick
 
 |ID |Description| Status|
 |:--:|:--:|:--:|
-|LL01| The user will be able to login successfully with the valid credential.|Done|
-|LL02| If user entered the incorrect login credentials then ‘SORRY !!!! LOGIN IS UNSUCESSFUL’ message should be displayed.| Done|
+|LL01| The user will be able to book ticket successfully with the valid age.|Done|
+|LL02| If user entered the incorrect  credentials then ‘SORRY !!!!Bbooking is UNSUCESSFUL’ message should be displayed.| Done|
 
