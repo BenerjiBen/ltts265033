@@ -1,112 +1,256 @@
-#include <calculator_operations.h>
+/**
+ * @file code.c
+ * @author Sai Benerji (https://github.com/BenerjiBen/ltts265033)
+ * @brief 
+ * @version 0.1
+ * @date 2021-04-16
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
-/* Status of the operation requested */
-#define VALID   (1)
-#define INVALID (0)
-
-/* Calculator operation requested by user*/
-unsigned int calculator_operation = 0;
-
-/* Operands on which calculation is performed */
-int calculator_operand1 = 0;
-int calculator_operand2 = 0;
-
-/* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, EXIT };
-
-/* Display the menu of operations supported */
-void calculator_menu(void);
-/* Verifies the requested operations validity */
-int valid_operation(int operation);
+#include<stdio.h>
+#include<stdlib.h>
+#define size 200
 
 
-/* Start of the application */
-int main(int argc, char *argv[])
+
+typedef struct NODE
 {
-    printf("\n****Calculator****\n");
-    while(1)
-    {
-        calculator_menu();
+	int reg_no;
+	int age;
+	char name[20];
+	struct NODE *next;
+} node;
+
+node* deq();
+int create();
+int reserve(node*);
+int cancel(int);
+void enq(node*);
+void display();
+
+
+node *start;
+node *front;
+node *rear;
+int count=0;
+int num=0;
+
+int create( )
+{
+	node *new;
+	new=(node *)malloc(sizeof(node));
+	new->reg_no=1;
+	printf("Name: ");
+	scanf("%s", new->name);
+	printf("Age : ");
+	scanf("%d", &new->age);
+    if(new->age>=90 || new->age<=10) {
+        free(new);
+        return -1;
     }
+	
+	start=new;
+	new->next=NULL;
+	num++;
+    return 1;
+	
 }
 
-void calculator_menu(void)
+int reserve(node *start)
 {
-    printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit");
-    printf("\n\tEnter your choice\n");
-   
-     // __fpurge(stdin);
-    scanf("%d", &calculator_operation);
-
-    if(EXIT == calculator_operation)
-    {
-        printf("\nThank you. Exiting the Application\n");
-        exit(0);
+	int temp;
+	if(start==NULL)
+	{   
+   		temp = create(start);
+		 return temp;
+	}
+	else 
+	{
+	
+	node *temp, *new_node;
+	temp=start;
+	while(temp->next!=NULL)
+	{ 
+	  temp=temp->next;
+	}
+	
+	new_node=(node *)malloc(sizeof(node));
+	
+	printf("Name: ");
+	scanf("%s", new_node->name);
+	printf("Age : ");
+	scanf("%d", &new_node->age);
+    if(new_node->age >=90 || new_node->age<=10) {
+        return -1;
     }
-
-    if(INVALID != valid_operation(calculator_operation))
-    {
-        printf("\n\tEnter your Numbers with space between them\n");
-        // __fpurge(stdin);
-        scanf("%d %d", &calculator_operand1, &calculator_operand2);
-    }
-    else
-    {
-        printf("\n\t---Wrong choice---\nEnter to continue\n");
-        // __fpurge(stdin);
-        getchar();
-        return;
-        
-    }
-    switch(calculator_operation)
-    {
-        case ADD:
-            printf("\n\t%d + %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            add(calculator_operand1, calculator_operand2));
-            
-            // __fpurge(stdin);
-            getchar();
-            break;
-        case SUBTRACT:
-            printf("\n\t%d - %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            subtract(calculator_operand1, calculator_operand2));
-            
-            // __fpurge(stdin);
-            getchar();
-            break;
-        case MULTIPLY:
-            printf("\n\t%d * %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            multiply(calculator_operand1, calculator_operand2));
-            
-            // __fpurge(stdin);
-            getchar();
-            break;
-        case DIVIDE:
-            printf("\n\t%d / %d = %d\nEnter to continue", 
-            calculator_operand1, 
-            calculator_operand2,
-            divide(calculator_operand1, calculator_operand2));
-            
-            // __fpurge(stdin);
-            getchar();
-            break;
-        case 5:
-            exit(0);
-            break;
-        default:
-            printf("\n\t---It should never come here---\n");
-    }
+	new_node->next=NULL;
+	if(num<=size)
+	{
+		num++;
+		new_node->reg_no=num;
+		temp->next=new_node;
+		
+		return 1;
+	}
+	else
+	{
+		enq(new_node);
+		return 0;
+	}
+}
 }
 
-int valid_operation(int operation)
+
+int cancel(int reg)
 {
-    /* Check if the operation is a valid operation */
-    return ((ADD <= operation) && (EXIT >= operation)) ? VALID: INVALID;
+	node *ptr, *preptr, *new;
+	ptr=start;
+	preptr=NULL;
+	if(start==NULL)
+	return -1;
+	if(ptr->next==NULL && ptr->reg_no==reg)
+		{
+		start=NULL;
+		num--;
+		free(ptr);
+		return 1;
+		
+		}
+		
+	else{	
+	while(ptr->reg_no!=reg && ptr->next!=NULL)
+		{
+			preptr=ptr;
+			ptr=ptr->next;
+		}
+		if(ptr==NULL && ptr->reg_no!=reg)
+			return -1;
+		else
+			preptr->next=ptr->next;
+		free(ptr);
+		new=deq();
+		while(preptr->next!=NULL)
+			preptr=preptr->next;
+		preptr->next=new;
+		num--;
+		return 1;
+	
+	}
+}
+
+void enq(node *new_node)
+{
+	if(rear==NULL)
+	{
+		rear=new_node;
+		rear->next=NULL;
+		front=rear;
+	}
+	else
+	{
+		node *temp;
+		temp=new_node;
+		rear->next=temp;
+		temp->next=NULL;
+		rear=temp;
+	}
+	count++;
+}
+
+node* deq()
+{
+	node *front1;
+	front1=front;
+	if(front==NULL)
+		return NULL;
+	else
+	{
+	    count-- ;
+		if(front->next!=NULL)
+		{
+			front=front->next;
+			front1->next=NULL;
+			return front1;
+		}
+		else
+		{
+			front=NULL;
+			rear=NULL;
+			
+			return front1;
+		}
+	}	
+}
+
+
+void display()
+{
+	node *temp;
+	temp=start;
+	while(temp!=NULL)
+	{
+		printf("\nTicket Number: %d\n", temp->reg_no);
+		printf("Name : %s\n\n", temp->name);
+		temp=temp->next;
+    }
+    
+}
+
+int main()
+{
+	int choice, status=0,canc=0, reg=0;
+	start=NULL;
+	rear=NULL;
+	front=NULL;
+	
+	
+	
+	printf("\t\t\t\t\t\tTIRUMALA TIRUPATI DEVASTHANAMS\t\t\t\t\t\t\n");
+	int ch =0;
+	while(ch!=4)
+	{
+	printf("\n\nDo you want to - \n 1. Book for a Darshan \n 2. Cancel Booking \n 3. Display pilgrim details \n 4. exit\n\n");
+	scanf("%d", &choice); 
+	switch(choice)
+	{	
+		case 1 :  status=reserve(start);
+	              if(status==0)
+	                printf("\nBooking Full!! \nYou are added to waiting list. Waiting list number %d", count);
+	              else if(status == -1) {
+                      printf("\n age not eligible");
+                  }
+                  else
+	                printf(" \nBooking Successful!!! Enjoy your visit to this beautiful land and experience the spiritual bliss! Your Ticket No is %d\n\n", num);
+	                
+	              break;
+	        
+	    case 2:   printf(" \n Give the Ticket number to be cancelled\n");
+	              scanf(" %d", &reg);
+	              if(reg>num)
+	              printf("Invalid!!");
+	              else
+	              {
+	              canc=cancel(reg);
+	              if(canc==-1)
+	              	printf("\nTicket number invalid!!\n");
+	              else
+	              	printf("\nTicket cancelled successfully\n");
+	              	}
+	              break;
+	              
+	    case 3: display();
+	    break;
+	    case 4: exit(0);   
+	    break;
+	    default: printf("\nWrong choice!\n");       
+	              
+	                 
+		          
+	
+	}
+	
+}
+
 }
