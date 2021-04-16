@@ -1,6 +1,6 @@
 # Requirements
 ## Introduction
- This system is basically concerned with the reservation of Darshan  tickets to the piligrims who wants to visit Tirumala.
+ This system is basically concerned with the booking of Darshan  tickets to the piligrims who wants to visit Tirumala.
 
 In this project the booking of darshan tickets is done with the feature of cancelling and waiting list.
 
