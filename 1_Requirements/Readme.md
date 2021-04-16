@@ -25,8 +25,7 @@ All the manual work should be converted into computerized so that the load of em
 The data should be stored in computer rather than in register manually.
 Booking can be done by sitting at your home only, no need to visit the booking counter!
 
-## Defining Our System
-    -- TBD
+
 ## SWOT ANALYSIS
 ![SWOT-Sample](Link ![Untitled Workspace](https://user-images.githubusercontent.com/63308610/114976873-530b3280-9ea4-11eb-9ef8-9d2fd4f1d822.png)
 to Pic)
