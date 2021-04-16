@@ -1,13 +1,3 @@
 # Design
 
-## High Level Design 
-
---- TBD Structural and Behavioural Diagram
-![HighLevelStructuralDiagram](Link to Pic)
-![HighLevelBehaviouralDiagram](Link to Pic)
-
-## Low Level Design 
-
---- TBD Structural and Behavioural Diagram
-![FeaturesLevelStructuralDiagram](Link to Pic)
-![FeaturesBehaviouralDiagram](Link to Pic)
+[Architecture Diagram.docx](https://github.com/BenerjiBen/ltts265033/files/6323978/Architecture.Diagram.docx)
