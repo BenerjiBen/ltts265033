@@ -44,29 +44,43 @@ Helpful during COVID.
 
 ## Who:
 
-**TBD**
+This is a software solution by providing organized form. This system is used for any kind of Darshan tickets into a particular order in order to maintain it
+in a organized form 
 
 ## What:
 
-**TBD**
+A simple and easy to use system for the Users to do all the activities related to online 
+darshan ticket booking system such as booking, cancellation and all other functions.
 
 ## When:
 
-**TBD**
+As one of the busiest temples in the whole of the world and to handle it 
+manually is quite tough job thus it is required now to design such systems which will 
+help to do this job efficiently
 
 ## Where:
 
-**TBD**
+People from anywhere can use this and book their tickets
 
 ## How:
 
-**TBD**
+The user is presented with multiple options for booking and cancellation of tickets.
 
 # Detail requirements
 ## High Level Requirements:
---- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
-
+ID Description Status
+HL01  |User Shall be able to login the system. | Done
+------------------------------------------------------
+HL02  |User Shall be able to book the ticket.  | Done
+------------------------------------------------------
+HL03  |User Shall be able to view the available trains.| Done
+-------------------------------------------------------------
+HL04  |User Shall be able to cancel the ticket.| Done
+----------------------------------------------------------
+HL05  |Data should be saved in case of failure.| Future
+-------------------------------------------------------
+HL06  |Proper GUI can be implemented for further.| Future
+---------------------------------------------------------
 
 ##  Low level Requirements:
 --- TBD in Tabular Format 
