@@ -5,9 +5,9 @@
 In this project the booking of darshan tickets is done with the feature of cancelling and waiting list.
 
 In the project we are going to include entities like
-Booking
-Cancellation
-Display reserved and waiting list piligrims.
+Booking,
+Cancellation,
+Display booked tickets and waiting list piligrims.
 
 
 
